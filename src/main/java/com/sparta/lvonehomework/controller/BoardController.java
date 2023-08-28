@@ -56,6 +56,7 @@ public class BoardController {
         return boardService.updateBoard(no, requestDto);
     }
 
+    //선택한 게시글 삭제 API
     @DeleteMapping("/board/{no}")
     public String deleteBoard(@PathVariable Long no, @RequestBody BoardRequestDto requestDto) {
         BoardService boardService = new BoardService(jdbcTemplate);
